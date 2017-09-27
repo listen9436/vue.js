@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="value in object">
+            {{value}}
+        </li>
+    </ul>
+    <br>
+    <br>
+    <p>也可以提供第二个的参数为键名</p>
+    <ul>
+        <li v-for="(value,key) in aaa">
+            {{key}}-----{{value}}
+        </li>
+    </ul>
+    <br>
+    <br>
+    <p>第三个的参数为索引</p>
+    <ul>
+        <li v-for="(value,key,index) in bbb">
+            {{index}}-*-*-*-*-*-{{key}}-----{{value}}
+        </li>
+    </ul>
+    <br>
+    <br>
+    <p>迭代整数</p>
+    <ul>
+        <li v-for="n in 100">
+            {{n}}
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            object:{
+                name:"视频社交",
+                url:"http://www.baidu.com",
+                slogan:'视频社交，就在陌陌~'
+            },
+            aaa:{
+                name:"用视频认识我！",
+                url:"http://www.baidushipinshejiao.com",
+                slogan:'视频社交，就在陌陌asdas~'
+            },
+            bbb:{
+                name:"视频社交",
+                url:"http://www.baidu.com",
+                slogan:'视频社交，就在陌陌~'
+            }
+        }
+    })
+</script>
+</body>
+</html>

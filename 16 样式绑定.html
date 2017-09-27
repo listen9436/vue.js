@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+    <style>
+        .active{
+            width: 100px;
+            height: 100px;
+            background: #00BCD4;
+        }
+        .active2{
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-bind:class="{active:isActive,active2:isAaa}"></div>
+</div>
+<p>在对象中传入更多属性用来动态切换多个 class </p>
+<p>active2 类背景颜色覆盖了 active 类的背景色</p>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            isActive:true,
+            isAaa:true
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li v-for="site in sites">
+            {{site.name}}
+        </li>
+    </ol>
+    <br>
+    <br>
+    <p>模板中使用循环</p>
+    <template v-for="item in items">
+        <ul>
+            <li>{{item.name}}</li>
+            <li>---------------</li>
+        </ul>
+    </template>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            sites:[
+                {name:'Runoob'},
+                {name:'Google'},
+                {name:'Taobao'}
+            ],
+            items:[
+                {name:'laji'},
+                {name:'caibi'},
+                {name:'zhazha'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

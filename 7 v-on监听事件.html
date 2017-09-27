@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">反转字符串</button>
+    <p>按钮的事件我们可以使用 v-on 监听事件，并对用户的输入进行响应。</p>
+    <!--
+
+    Vue.js 为两个最为常用的指令提供了特别的缩写：
+    完整语法
+    <a v-bind:href="url"></a>
+     缩写
+    <a :href="url"></a>
+
+    v-on 缩写
+     完整语法
+    <a v-on:click="doSomething"></a>
+     缩写
+    <a @click="doSomething"></a>
+    -->
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            message:"Baidu!"
+        },
+        methods:{
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

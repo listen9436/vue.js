@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+    <style>
+        .active{
+            width: 100px;
+            height: 100px;
+            background: #00BCD4;
+        }
+        .active2{
+            width: 100px;
+            height: 100px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-bind:class="[isActive ? activeClass : active2Class]"></div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            isActive:true,
+            activeClass:"active",
+            active2Class:"active2"
+        }
+    })
+</script>
+</body>
+</html>

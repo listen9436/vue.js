@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    {{5+5}}<br>
+    {{ok?'Yes':'No'}}<br>
+    {{message.split('').reverse().join('')}}
+    <div v-bind:id="'list'+id">爱上大声地</div>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            ok:true,
+            message:"RUNOOB",
+            id:1
+        }
+    })
+</script>
+</body>
+</html>

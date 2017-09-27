@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>单个复选框</p>
+    <input type="checkbox" id="aaa" v-model="checked">
+    <label for="aaa">{{checked}}</label>
+
+    <p>多个复选框</p>
+    <input type="checkbox" id="bbb" value="Runoob" v-model="checkedNames">
+    <label for="bbb">Runoob</label>
+    <input type="checkbox" id="ccc" value="Google" v-model="checkedNames">
+    <label for="ccc">Google</label>
+    <input type="checkbox" id="ddd" value="Taobao" v-model="checkedNames">
+    <label for="ddd">Taobao</label>
+
+    <br>
+    <span>选择的值位：{{checkedNames}}</span>
+</div>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            checked:false,
+            checkedNames:[]
+        }
+    })
+</script>
+</body>
+</html>
